@@ -1,21 +1,16 @@
 ﻿#include <iostream>
-
-
-/*
-     (3+4) * (5/2) +7 + (9-5))
-     소괄호 및 연사자를 파악해 연산 순위를 결정해 계산해야함.
-     
-     계산법
-      1. 중위 표기법 -> 후위 표기법 
-         (후위 표기법은 소괄호 없이도 연순순서가 내포되어 있음)
-         (즉 중위표기보다 간단히 계산 가능)
-      2. 후위 표기법 계산
-
-
-
-*/
-
+#include <string>
+#include <stack>
+#include <vector>
+#include <map>
+using namespace std;
 int main()
 {
+     int a;
+     int c;
+     int af;
+
      
 }
+
+

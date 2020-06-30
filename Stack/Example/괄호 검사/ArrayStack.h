@@ -57,7 +57,7 @@ public :
           }
           cout << endl;
      }
-
+     
      int size() {
           return top+1;
      }

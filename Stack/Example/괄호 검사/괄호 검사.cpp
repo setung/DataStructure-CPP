@@ -3,7 +3,7 @@
 #include "ArrayStack.h"
 using namespace std;
 
-bool checkMatching(string str) {
+void checkMatching(string str) {
      int nLine = 1;
      int nChar = 0;
      ArrayStack stack;
