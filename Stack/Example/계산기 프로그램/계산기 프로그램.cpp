@@ -3,13 +3,11 @@
 #include <stack>
 #include <vector>
 #include <map>
+
 using namespace std;
 int main()
 {
-     int a;
-     int c;
-     int af;
-
+     
      
 }
 
