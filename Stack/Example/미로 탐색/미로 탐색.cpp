@@ -23,7 +23,7 @@ struct Location2D {
                (col == p.col) && (row == p.row - 1 || row == p.row + 1));
      }
 
-     bool operator==(Location2D& p) { return row = p.row && col == p.col; }
+     bool operator==(Location2D& p) { return row == p.row && col == p.col; }
 };
 
 bool isValidLoc(int r, int c) {
