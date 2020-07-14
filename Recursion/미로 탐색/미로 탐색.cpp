@@ -1,5 +1,4 @@
 ﻿#include <iostream>
-#include <queue>
 
 using namespace std;
 
@@ -34,33 +33,39 @@ bool isValidLoc(int r, int c) {
           return map[r][c] == '0' || map[r][c] == 'x';
 }
 
-int main()
-{
-     queue<Location2D> locQueue;
-     Location2D entry(1, 0);
-     locQueue.push(entry);
+Location2D locEntry, locExit;
+bool done = false;
 
-     while (locQueue.empty() == false) {
-          Location2D here = locQueue.front();
-          locQueue.pop();
-
-          int r = here.row;
-          int c = here.col;
-          cout << r << ',' << c << ' ' << '\n';
-
-          if (map[r][c] == 'x') {
-               cout << "finish \n";
-               return 0;
-          }
-          else {
-               map[r][c] = '.';
-               if (isValidLoc(r - 1, c)) locQueue.push(Location2D(r - 1, c));
-               if (isValidLoc(r + 1, c)) locQueue.push(Location2D(r + 1, c));
-               if (isValidLoc(r, c + 1)) locQueue.push(Location2D(r, c + 1));
-               if (isValidLoc(r, c - 1)) locQueue.push(Location2D(r, c - 1));
-          }
+void searchRecur(Location2D pt) {
+     cout << pt.row << "," << pt.col<<' ';
+     if (done) return;
+     if (pt == locExit) {
+          done = true;
+          return;
      }
 
-     cout << "탐색 실패\n";
+     int r = pt.row;
+     int c = pt.col;
+     map[r][c] = '5';
+
+     if (isValidLoc(r - 1, c)) searchRecur(Location2D(r - 1, c));
+     if (isValidLoc(r + 1, c)) searchRecur(Location2D(r + 1, c));
+     if (isValidLoc(r, c+1)) searchRecur(Location2D(r - 1, c+1));
+     if (isValidLoc(r, c-1)) searchRecur(Location2D(r - 1, c-1));
+
 }
 
+int main()
+{
+
+     locEntry = Location2D(1, 0);
+     locExit = Location2D(4, 5);
+
+     searchRecur(locEntry);
+
+     if (done)
+          cout << " 끝 \n";
+     else
+          cout << " 출구 못찾음\n";
+
+}
