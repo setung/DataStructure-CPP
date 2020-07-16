@@ -15,15 +15,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Tree.cpp">
+    <ClCompile Include="ExpressionTree.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="LinkedBinaryTree.h">
+    <ClInclude Include="BinaryNode.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="BinaryNode.h">
+    <ClInclude Include="BinaryTree.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

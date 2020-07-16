@@ -1,5 +1,5 @@
 ﻿#include <iostream>
-#include "BinaryTree.h"
+#include "LinkedBinaryTree.h"
 
 /*
      이진트리 특징
@@ -18,7 +18,7 @@
 
 int main()
 {
-     BinaryTree tree;
+     LinkedBinaryTree tree;
      BinaryNode* d = new BinaryNode(4, NULL, NULL);
      BinaryNode* e = new BinaryNode(5, NULL, NULL);
      BinaryNode* b = new BinaryNode(2, d, e);
@@ -31,5 +31,10 @@ int main()
      tree.preorder();
      tree.postorder();
      tree.levelorder();
+
+     cout << "\n노드 갯수 : " << tree.getCount() << endl;
+     cout << "단말 노드 갯수 : " << tree.getLeafCount() << endl;
+     cout << "트리 높이 : " << tree.getHeight() << endl;
+
 }
 
