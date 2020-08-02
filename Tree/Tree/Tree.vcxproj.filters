@@ -26,5 +26,8 @@
     <ClInclude Include="BinaryNode.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="BinSrchTree.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

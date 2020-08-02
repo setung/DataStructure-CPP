@@ -1,6 +1,6 @@
 ﻿#include <iostream>
 #include "LinkedBinaryTree.h"
-
+#include "BinSrchTree.h"
 /*
      이진트리 특징
        - n개의 노드 = n-1개의 간선
@@ -18,7 +18,7 @@
 
 int main()
 {
-     LinkedBinaryTree tree;
+     /*LinkedBinaryTree tree;
      BinaryNode* d = new BinaryNode(4, NULL, NULL);
      BinaryNode* e = new BinaryNode(5, NULL, NULL);
      BinaryNode* b = new BinaryNode(2, d, e);
@@ -34,7 +34,10 @@ int main()
 
      cout << "\n노드 갯수 : " << tree.getCount() << endl;
      cout << "단말 노드 갯수 : " << tree.getLeafCount() << endl;
-     cout << "트리 높이 : " << tree.getHeight() << endl;
+     cout << "트리 높이 : " << tree.getHeight() << endl;*/
+
+
+     BinSrchTree binSrchTree;
 
 }
 
