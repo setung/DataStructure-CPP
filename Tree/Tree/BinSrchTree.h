@@ -10,10 +10,7 @@
 #include "LinkedBinaryTree.h"
 
 class BinSrchTree :public LinkedBinaryTree {
-public :
-     BinSrchTree(void) {}
-     ~BinSrchTree(void) {}
-    
+private:
      //순환기반 탐색
      BinaryNode* searchRecur(BinaryNode* n, int key) {
           if (n == NULL) return NULL;
@@ -21,7 +18,7 @@ public :
                return n;
           else if (key < n->getData())
                return searchRecur(n->getLeft(), key);
-          else 
+          else
                return searchRecur(n->getRight(), key);
      }
      //반복기반 탐색
@@ -58,7 +55,7 @@ public :
 
      //삭제연산
      void remove(BinaryNode* parent, BinaryNode* node) {
-          
+
           // 삭제하는 노드가 단말 노드일 경우
           if (node->isLeaf()) {
                if (parent == NULL)           // node가 root여서 parent가 NULL 인 경우
@@ -74,7 +71,7 @@ public :
           else if (node->getLeft() == NULL || node->getRight() == NULL) {
                BinaryNode* child = (node->getLeft() != NULL) ? node->getLeft() : node->getRight();
 
-               if (node == getRoot()) 
+               if (node == getRoot())
                     setRoot(child);
                else {
                     if (parent->getLeft() == node)
@@ -105,4 +102,47 @@ public :
 
           delete node;
      }
+
+public:
+     BinSrchTree(void) {}
+     ~BinSrchTree(void) {}
+
+
+
+     BinaryNode* search(int key) {
+          BinaryNode* node = searchRecur(getRoot(), key);
+          if (node != NULL)
+               cout << "탐색 성공 : 키값이 " << node->getData() << "인 노드 = " << node << '\n';
+          else
+               cout << "탐색 실패: 키값이 " << key << "인 노드 없음\n";
+
+          return node;
+     }
+
+     void insert(BinaryNode* n) {
+          if (n == NULL) return;
+          if (isEmpty()) setRoot(n);
+          else insertRecur(getRoot(), n);
+     }
+
+     void remove(int key) {
+          if (isEmpty()) return;
+
+          BinaryNode* parent = NULL;
+          BinaryNode* node = getRoot();
+          while (node != NULL && node->getData() != key) {
+               parent = node;
+               node = (key < node->getData())
+                    ? node->getLeft() : node->getRight();
+
+          }
+
+          if (node == NULL) {
+               cout << "Error: Key("<< key<<") is not in the tree!\n";
+               return;
+          }
+          else remove(parent, node);
+
+     }
+
 };

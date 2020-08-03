@@ -38,6 +38,21 @@ int main()
 
 
      BinSrchTree binSrchTree;
+     binSrchTree.insert(new BinaryNode(1));
+     binSrchTree.inoder();
+     binSrchTree.insert(new BinaryNode(5));
+     binSrchTree.inoder();
+     binSrchTree.insert(new BinaryNode(4));
+     binSrchTree.inoder();
+     binSrchTree.insert(new BinaryNode(7));
+     binSrchTree.inoder();
+     binSrchTree.insert(new BinaryNode(9));
+     binSrchTree.inoder();
+
+     binSrchTree.remove(5);
+     binSrchTree.remove(1);
+
+     binSrchTree.inoder();
 
 }
 
