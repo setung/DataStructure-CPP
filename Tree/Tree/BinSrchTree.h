@@ -35,52 +35,81 @@ private:
           return NULL;
      }
 
-     //삽입연산
-     void insertRecur(BinaryNode* r, BinaryNode* n) {
-          if (n->getData() == r->getData())
+public:
+     BinSrchTree(void):LinkedBinaryTree() {}
+     ~BinSrchTree(void) {}
+
+#pragma region Insert
+     void insert(BinaryNode* r, BinaryNode* n) {
+          if (r->getData() == n->getData())
                return;
-          else if (n->getData() < r->getData()) {
-               if (r->getLeft() == NULL)
-                    r->setLeft(n);
-               else
-                    insertRecur(r->getLeft(), n);
-          }
-          else {
+          else if (r->getData() < n->getData()) {
                if (r->getRight() == NULL)
                     r->setRight(n);
                else
-                    insertRecur(r->getRight(), n);
+                    insert(r->getRight(), n);
+          }
+          else {
+               if (r->getLeft() == NULL)
+                    r->setLeft(n);
+               else
+                    insert(r->getLeft(), n);
           }
      }
+     void insert(BinaryNode* n) {
+          if (n == NULL) return;
+          if (isEmpty()) root = n;
+          else insert(root, n);
+     }
+#pragma endregion
 
-     //삭제연산
+#pragma region Delete
+     void remove(int key) {
+          if (isEmpty())
+               cout << "tree is empty\n";
+
+          BinaryNode* parent = NULL;
+          BinaryNode* node = root;
+
+          while (node != NULL && node->getData() != key) {
+               parent = node;
+               node = (key < node->getData()) ? node->getLeft() : node->getRight();
+          }
+
+          if (node == NULL) {
+               cout << "key(" << key << ") is not in the tree\n";
+               return;
+          }
+          else
+               remove(parent, node);
+
+     }
      void remove(BinaryNode* parent, BinaryNode* node) {
-
-          // 삭제하는 노드가 단말 노드일 경우
+          //case 1
           if (node->isLeaf()) {
-               if (parent == NULL)           // node가 root여서 parent가 NULL 인 경우
-                    setRoot(NULL);
+               if (parent == NULL)
+                    root = NULL;
                else {
                     if (parent->getLeft() == node)
                          parent->setLeft(NULL);
-                    else
+                    else if (parent->getRight() == node)
                          parent->setRight(NULL);
                }
           }
-          // 삭제하는 노드가 하나의 자식을 갖은 경우
+          //case 2
           else if (node->getLeft() == NULL || node->getRight() == NULL) {
                BinaryNode* child = (node->getLeft() != NULL) ? node->getLeft() : node->getRight();
 
-               if (node == getRoot())
-                    setRoot(child);
+               if (node == root) root = child;
                else {
                     if (parent->getLeft() == node)
                          parent->setLeft(child);
-                    else
+                    else if (parent->getRight() == node)
                          parent->setRight(child);
                }
+
           }
-          // 삭제하는 노드가 두개의 자식을 갖은 경우
+          //case 3
           else {
                BinaryNode* succp = node;
                BinaryNode* succ = node->getRight();
@@ -97,52 +126,46 @@ private:
 
                node->setData(succ->getData());
                node = succ;
-
           }
-
           delete node;
      }
+#pragma endregion
 
-public:
-     BinSrchTree(void) {}
-     ~BinSrchTree(void) {}
-
-
-
+#pragma region Search
+     BinaryNode* search(BinaryNode* r, int key) {
+          if (r->getData() == key)
+               return r;
+          else if (r->getData() < key) {
+               if (r->getRight() == NULL)
+                    return NULL;
+               else
+                    search(r->getRight(), key);
+          }
+          else {
+               if (r->getLeft() == NULL)
+                    return NULL;
+               else
+                    search(r->getLeft(), key);
+          }
+     }
      BinaryNode* search(int key) {
-          BinaryNode* node = searchRecur(getRoot(), key);
-          if (node != NULL)
-               cout << "탐색 성공 : 키값이 " << node->getData() << "인 노드 = " << node << '\n';
-          else
-               cout << "탐색 실패: 키값이 " << key << "인 노드 없음\n";
-
-          return node;
-     }
-
-     void insert(BinaryNode* n) {
-          if (n == NULL) return;
-          if (isEmpty()) setRoot(n);
-          else insertRecur(getRoot(), n);
-     }
-
-     void remove(int key) {
-          if (isEmpty()) return;
-
-          BinaryNode* parent = NULL;
-          BinaryNode* node = getRoot();
-          while (node != NULL && node->getData() != key) {
-               parent = node;
-               node = (key < node->getData())
-                    ? node->getLeft() : node->getRight();
-
+          if (isEmpty()) {
+               cout << "Tree is empty\n";
+               return NULL;
           }
 
-          if (node == NULL) {
-               cout << "Error: Key("<< key<<") is not in the tree!\n";
-               return;
+          BinaryNode* n = search(root, key);
+          if (n == NULL) {
+               cout << "Key(" << key << ") is not in Tree\n";
           }
-          else remove(parent, node);
+          else {
+               cout << "Key(" << key << ") is in Tree // node : " << n << " \n";
+          }
 
+          return n;
      }
+
+
+#pragma endregion
 
 };

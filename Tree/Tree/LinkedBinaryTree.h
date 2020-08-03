@@ -3,7 +3,8 @@
 #include <queue>
 
 class LinkedBinaryTree {
-     
+protected :
+
      BinaryNode* root;
 
 public :
@@ -16,6 +17,7 @@ public :
      void inoder() {
           cout << "\n inorder: ";
           inorder(root);
+          cout << '\n';
      }
      void inorder(BinaryNode* node) {
           if (node != NULL) {
@@ -27,6 +29,7 @@ public :
      void preorder(){
           cout << "\n preorder: ";
           preorder(root);
+          cout << '\n';
      }
      void preorder(BinaryNode* node) {
           if (node != NULL) {
@@ -38,6 +41,7 @@ public :
      void postorder(){
           cout << "\n postorder: ";
           postorder(root);
+          cout << '\n';
      }
      void postorder(BinaryNode* node) {
           if (node != NULL) {
