@@ -17,3 +17,7 @@
 
   Tree
     - Based LinkedList
+
+  Priority Queue
+
+  Table & Hash
