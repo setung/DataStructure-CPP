@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Stack", "Stack", "{4C9010A7-0488-4677-BEB8-5EF3D10BCFE5}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Stack", "3. Stack", "{4C9010A7-0488-4677-BEB8-5EF3D10BCFE5}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Stack", "Stack\Stack\Stack.vcxproj", "{8558D843-736E-4FA4-B567-27131F510439}"
 EndProject
@@ -20,7 +20,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "미로 탐색", "Stack\Exam
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "계산기 프로그램", "Stack\Example\계산기 프로그램\계산기 프로그램.vcxproj", "{FE06A5CA-ECCF-44AF-BAAD-F9BEDD9A23EE}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Queue", "Queue", "{0FEAD5D0-E8DE-424D-9C36-D66A67DA8657}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Queue", "4. Queue", "{0FEAD5D0-E8DE-424D-9C36-D66A67DA8657}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Queue", "Queue\Queue\Queue.vcxproj", "{55D79183-B264-437E-A7F6-B5026D7B81DE}"
 EndProject
@@ -28,7 +28,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Example", "Example", "{EB33
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "미로 탐색", "Queue\Example\미로 탐색\미로 탐색.vcxproj", "{9DC07EA2-ACB8-4336-8A92-29200DB3C908}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "List", "List", "{BC7A7CAC-A078-456D-AC4A-F3B31D742BA0}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. List", "1. List", "{BC7A7CAC-A078-456D-AC4A-F3B31D742BA0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Example", "Example", "{5EDA081F-2FDE-4FBE-971C-C4AE7BE9EE6E}"
 EndProject
@@ -36,11 +36,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "List", "List\List\List.vcxp
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "라인 편집기", "List\Example\라인 편집기\라인 편집기.vcxproj", "{B04F25A9-5A4E-4B10-984A-E0B7570EE1C5}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tree", "Tree", "{6F442F99-1FE8-4DD9-9B25-28BE4A8298C7}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5. Tree", "5. Tree", "{6F442F99-1FE8-4DD9-9B25-28BE4A8298C7}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tree", "Tree\Tree\Tree.vcxproj", "{C6EA1661-1336-42F7-9A33-B4A923385C6D}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Recursion", "Recursion", "{B3208E20-AD47-49B8-A629-D0D41D98DA1F}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Recursion", "2. Recursion", "{B3208E20-AD47-49B8-A629-D0D41D98DA1F}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Factorial", "Recursion\Factorial\Factorial.vcxproj", "{981E0529-B49A-4DCC-91E7-48E8037D9D29}"
 EndProject
@@ -60,7 +60,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ExpressionTree", "Tree\Exam
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ThreadBinaryTree", "Tree\Example\ThreadBinaryTree\ThreadBinaryTree.vcxproj", "{7B4FB296-8858-4DD8-864D-0EEE0F6DB0A9}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Priority_Queue", "Priority_Queue", "{AD236D58-4A33-407D-A0C3-D7D006A8155A}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6. Priority_Queue", "6. Priority_Queue", "{AD236D58-4A33-407D-A0C3-D7D006A8155A}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Priority_Queue", "Priority_Queue\Priority_Queue\Priority_Queue.vcxproj", "{2837237B-4E41-47F1-8B3E-EEC71301C902}"
 EndProject
@@ -69,6 +69,12 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HeapSort", "Priority_Queue\Example\HeapSort\HeapSort.vcxproj", "{FFF5CBE8-AA78-435F-8F3A-53C26D0A7624}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HuffmanCode", "Priority_Queue\Example\HuffmanCode\HuffmanCode.vcxproj", "{6E488FC3-E6E4-4D2A-A593-FF7A6E1AFCFD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "7. Graph", "7. Graph", "{796D9E0C-2920-4C00-B8A0-B52BC5E021BF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Example", "Example", "{8B127D98-7896-4B5E-BB05-5FE9390C3F88}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Graph", "Graph\Graph\Graph.vcxproj", "{AF9228C2-0EA7-4D04-93CF-E2EAB816956D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -238,6 +244,14 @@ Global
 		{6E488FC3-E6E4-4D2A-A593-FF7A6E1AFCFD}.Release|x64.Build.0 = Release|x64
 		{6E488FC3-E6E4-4D2A-A593-FF7A6E1AFCFD}.Release|x86.ActiveCfg = Release|Win32
 		{6E488FC3-E6E4-4D2A-A593-FF7A6E1AFCFD}.Release|x86.Build.0 = Release|Win32
+		{AF9228C2-0EA7-4D04-93CF-E2EAB816956D}.Debug|x64.ActiveCfg = Debug|x64
+		{AF9228C2-0EA7-4D04-93CF-E2EAB816956D}.Debug|x64.Build.0 = Debug|x64
+		{AF9228C2-0EA7-4D04-93CF-E2EAB816956D}.Debug|x86.ActiveCfg = Debug|Win32
+		{AF9228C2-0EA7-4D04-93CF-E2EAB816956D}.Debug|x86.Build.0 = Debug|Win32
+		{AF9228C2-0EA7-4D04-93CF-E2EAB816956D}.Release|x64.ActiveCfg = Release|x64
+		{AF9228C2-0EA7-4D04-93CF-E2EAB816956D}.Release|x64.Build.0 = Release|x64
+		{AF9228C2-0EA7-4D04-93CF-E2EAB816956D}.Release|x86.ActiveCfg = Release|Win32
+		{AF9228C2-0EA7-4D04-93CF-E2EAB816956D}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -268,6 +282,8 @@ Global
 		{966F4BDF-475F-4E35-B584-1ED315F4328F} = {AD236D58-4A33-407D-A0C3-D7D006A8155A}
 		{FFF5CBE8-AA78-435F-8F3A-53C26D0A7624} = {966F4BDF-475F-4E35-B584-1ED315F4328F}
 		{6E488FC3-E6E4-4D2A-A593-FF7A6E1AFCFD} = {966F4BDF-475F-4E35-B584-1ED315F4328F}
+		{8B127D98-7896-4B5E-BB05-5FE9390C3F88} = {796D9E0C-2920-4C00-B8A0-B52BC5E021BF}
+		{AF9228C2-0EA7-4D04-93CF-E2EAB816956D} = {796D9E0C-2920-4C00-B8A0-B52BC5E021BF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1AB1DAEB-8FE1-4A88-95EF-8F0214BED1BB}
