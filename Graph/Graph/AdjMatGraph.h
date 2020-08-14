@@ -9,6 +9,7 @@
 */
 
 #include <iostream>
+#include <queue>
 #define MAX_VTXS 256
 using namespace std;
 
@@ -54,6 +55,48 @@ public :
                for (int j = 0; j < size; j++)
                     cout << getEdge(i, j)<< ' ';
                cout << '\n';
+          }
+     }
+};
+
+class SrchANGraoh : public AdjMatGraph {
+     bool visited[MAX_VTXS];
+
+public:
+     void resetVisited() {
+          for (int i = 0; i < size; i++)
+               visited[i] = false;
+     }
+     bool isLinked(int u, int v) { return getEdge(u, v) != 0; }
+
+     void DFS(int v) {
+          visited[v] = true;
+          cout << getVertex(v) << ' ';
+
+          for (int w = 0; w < size; w++) {
+               if (isLinked(v, w) && !visited[w])
+                    DFS(w);
+          }
+     }
+
+     void BFS(int v) {
+          visited[v] = true;
+          cout << getVertex(v) << ' ';
+
+          queue<int> que;
+          que.push(v);
+
+          while (!que.empty()) {
+               int v = que.front();
+               que.pop();
+
+               for(int w= 0; w<size; w++) 
+                    if (isLinked(v, w) && !visited[w]) {
+                         visited[w] = true;
+                         cout << getVertex(w)<<' ';
+                         que.push(w);
+                    }
+
           }
      }
 };

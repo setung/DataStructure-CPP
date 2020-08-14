@@ -18,8 +18,7 @@
 
 int main()
 {
-     AdjMatGraph matG;
-
+     /*AdjMatGraph matG;
      for (int i = 0; i < 4; i++)
           matG.insertVertex('A' + i);
      matG.insertEdge(0, 1);
@@ -38,6 +37,33 @@ int main()
      listG.insertEdge(1, 2);
      listG.insertEdge(1, 3);
      listG.insertEdge(2, 3);
-     listG.display();
+     listG.display();*/
+
+    /* SrchANGraoh g;
+     for (int i = 0; i < 4; i++)
+          g.insertVertex('A' + i);
+     g.insertEdge(0, 1);
+     g.insertEdge(0, 3);
+     g.insertEdge(1, 2);
+     g.insertEdge(1, 3);
+     g.insertEdge(2, 3);
+     g.resetVisited();
+     g.DFS(0);
+     g.resetVisited();
+     g.BFS(0);*/
+
+
+     SrchALGraph listG;
+     for (int i = 0; i < 4; i++)
+          listG.insertVertex('A' + i);
+     listG.insertEdge(0, 1);
+     listG.insertEdge(0, 3);
+     listG.insertEdge(1, 2);
+     listG.insertEdge(1, 3);
+     listG.insertEdge(2, 3);
+     listG.resetVisited();
+     listG.DFS(0); 
+     listG.resetVisited();
+     listG.BFS(0); 
 }
 
