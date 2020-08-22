@@ -3,11 +3,8 @@
 
 int main()
 {
-
      WGraphMST g;
-    
      g.kruskal();
-   
 }
 
 

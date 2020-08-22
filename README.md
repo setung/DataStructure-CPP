@@ -20,4 +20,6 @@
 
   Priority Queue
 
-  Table & Hash
+  Graph
+
+  Weight Graph
