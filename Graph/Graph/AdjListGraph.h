@@ -4,12 +4,12 @@
 #define MAX_VTXS 5
 
 class AdjListGraph {
-protected :
+protected:
      int size;
      char vertices[MAX_VTXS];
      Node* adj[MAX_VTXS];
 
-public :
+public:
      AdjListGraph() : size(0) {}
      ~AdjListGraph() { reset(); }
      void reset() {
@@ -42,7 +42,7 @@ public :
           for (int i = 0; i < size; i++) {
                cout << getVertex(i) << ":  ";
                for (Node* v = adj[i]; v != NULL; v = v->getLink())
-                    cout << getVertex(v->getId())<<' ';
+                    cout << getVertex(v->getId()) << ' ';
                cout << endl;
 
           }
@@ -55,17 +55,17 @@ public :
 class SrchALGraph : public AdjListGraph {
      bool visited[MAX_VTXS];
 
-public :
+public:
      void resetVisited() {
           for (int i = 0; i < size; i++)
-               visited[i] = false; 
+               visited[i] = false;
      }
 
      bool isLinked(int u, int v) {
           for (Node* p = adj[u]; p != NULL; p = p->getLink())
                if (p->getId() == v) return true;
-               else
-                    false;
+
+          return false;
      }
 
      void DFS(int v) {
@@ -81,7 +81,7 @@ public :
      void BFS(int v) {
           visited[v] = true;
           cout << getVertex(v) << ' ';
-         
+
           queue<int> que;
           que.push(v);
 

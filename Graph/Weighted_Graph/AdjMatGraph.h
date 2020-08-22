@@ -1,12 +1,4 @@
 #pragma once
-/*
-     2차원 배열 기반 그래프
-          - n개의 정점을 가지는 그래프는 항상 n^2의 크기를 가짐
-          - 두 정점을 연결하는 간선의 존재 여부를 O(1) 알수 있음
-          - 정점의 차수는 O(n)
-          - 그래프의 존재하는 모든 간선의 수는 (On^2)
-
-*/
 
 #include <iostream>
 #include <queue>
@@ -59,44 +51,3 @@ public :
      }
 };
 
-class SrchANGraoh : public AdjMatGraph {
-     bool visited[MAX_VTXS];
-
-public:
-     void resetVisited() {
-          for (int i = 0; i < size; i++)
-               visited[i] = false;
-     }
-     bool isLinked(int u, int v) { return getEdge(u, v) != 0; }
-
-     void DFS(int v) {
-          visited[v] = true;
-          cout << getVertex(v) << ' ';
-
-          for (int w = 0; w < size; w++) {
-               if (isLinked(v, w) && !visited[w])
-                    DFS(w);
-          }
-     }
-
-     void BFS(int v) {
-          visited[v] = true;
-          cout << getVertex(v) << ' ';
-
-          queue<int> que;
-          que.push(v);
-
-          while (!que.empty()) {
-               int v = que.front();
-               que.pop();
-
-               for(int w= 0; w<size; w++) 
-                    if (isLinked(v, w) && !visited[w]) {
-                         visited[w] = true;
-                         cout << getVertex(w)<<' ';
-                         que.push(w);
-                    }
-
-          }
-     }
-};

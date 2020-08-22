@@ -76,6 +76,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Example", "Example", "{8B12
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Graph", "Graph\Graph\Graph.vcxproj", "{AF9228C2-0EA7-4D04-93CF-E2EAB816956D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Weighted_Graph", "Graph\Weighted_Graph\Weighted_Graph.vcxproj", "{3674CF16-49B5-47CB-8D7F-542E8F3995F7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -252,6 +254,14 @@ Global
 		{AF9228C2-0EA7-4D04-93CF-E2EAB816956D}.Release|x64.Build.0 = Release|x64
 		{AF9228C2-0EA7-4D04-93CF-E2EAB816956D}.Release|x86.ActiveCfg = Release|Win32
 		{AF9228C2-0EA7-4D04-93CF-E2EAB816956D}.Release|x86.Build.0 = Release|Win32
+		{3674CF16-49B5-47CB-8D7F-542E8F3995F7}.Debug|x64.ActiveCfg = Debug|x64
+		{3674CF16-49B5-47CB-8D7F-542E8F3995F7}.Debug|x64.Build.0 = Debug|x64
+		{3674CF16-49B5-47CB-8D7F-542E8F3995F7}.Debug|x86.ActiveCfg = Debug|Win32
+		{3674CF16-49B5-47CB-8D7F-542E8F3995F7}.Debug|x86.Build.0 = Debug|Win32
+		{3674CF16-49B5-47CB-8D7F-542E8F3995F7}.Release|x64.ActiveCfg = Release|x64
+		{3674CF16-49B5-47CB-8D7F-542E8F3995F7}.Release|x64.Build.0 = Release|x64
+		{3674CF16-49B5-47CB-8D7F-542E8F3995F7}.Release|x86.ActiveCfg = Release|Win32
+		{3674CF16-49B5-47CB-8D7F-542E8F3995F7}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -284,6 +294,7 @@ Global
 		{6E488FC3-E6E4-4D2A-A593-FF7A6E1AFCFD} = {966F4BDF-475F-4E35-B584-1ED315F4328F}
 		{8B127D98-7896-4B5E-BB05-5FE9390C3F88} = {796D9E0C-2920-4C00-B8A0-B52BC5E021BF}
 		{AF9228C2-0EA7-4D04-93CF-E2EAB816956D} = {796D9E0C-2920-4C00-B8A0-B52BC5E021BF}
+		{3674CF16-49B5-47CB-8D7F-542E8F3995F7} = {796D9E0C-2920-4C00-B8A0-B52BC5E021BF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1AB1DAEB-8FE1-4A88-95EF-8F0214BED1BB}
