@@ -18,7 +18,7 @@ public :
           Node* p = top;
           top = top->getLink();
 
-          delete p;
+          return p;
      }
 
      Node* peek() { return top; }
