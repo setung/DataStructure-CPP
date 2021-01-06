@@ -12,6 +12,7 @@
   List
     - Based ArrayList
     - Based LinkedList
+    - Based Double LinkedList
 
   Recursion
 
