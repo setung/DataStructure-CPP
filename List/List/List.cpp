@@ -1,6 +1,8 @@
 ﻿#include <iostream>
 #include "ArrayList.h"
 #include "Linked_List.h"
+#include "DbLinkedList.h"
+
 int main()
 {
      ArrayList list;
@@ -26,6 +28,12 @@ int main()
      linkedlist.clear();
      linkedlist.display();
 
-
+     DblLinkedList dbLinkedlist;
+     dbLinkedlist.insert(0, new Node2(10));
+     dbLinkedlist.insert(0, new Node2(20));
+     dbLinkedlist.insert(0, new Node2(30));
+     dbLinkedlist.display();
+     dbLinkedlist.remove(0);
+     dbLinkedlist.display();
 }
 

@@ -1,6 +1,13 @@
 #pragma once
 #include "Node.h"
 
+/*
+    구현 방식
+        - 헤드 노드    Node org
+        - 헤드 포인터  Node *org
+
+*/
+
 class Linked_List {
      Node org;
 
