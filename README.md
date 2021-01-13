@@ -24,3 +24,11 @@
   Graph
 
   Weight Graph
+
+  Sort
+    - Selection sort
+    - Insertion sort
+    - bubble sort
+    - shell sort
+    - merge sort
+    - quick sort
