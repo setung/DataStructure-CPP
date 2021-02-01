@@ -32,3 +32,5 @@
     - shell sort
     - merge sort
     - quick sort
+
+  HashMap
