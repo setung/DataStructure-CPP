@@ -142,8 +142,10 @@
     <ClCompile Include="HashMap.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="HashChainMap.h" />
     <ClInclude Include="hashFunctions.h" />
     <ClInclude Include="HashMap.h" />
+    <ClInclude Include="Node.h" />
     <ClInclude Include="Record.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -2,7 +2,6 @@
 #define TABLE_SIZE 13
 using namespace std;
 
-
 // 문자열로 된 탐색키를 숫자로 변환 : 간단한 덧셈 방식
 inline int transform(string key) {
 	int number = 0;

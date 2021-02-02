@@ -18,5 +18,5 @@ public :
 	bool isEmpty() { return key.empty(); }
 	bool equal(string k) { return k == key; }
 	void display() { cout << key << " = " << value << '\n'; }
-
+	string getKey() { return key; }
 };
